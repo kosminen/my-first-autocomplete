@@ -1,0 +1,13 @@
+:root {
+  --colors-border: hsl(0deg 0% 60%);
+  --colors-focus: hsl(199.4, 90.1%, 43.7%);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+}
+
+:focus {
+  outline-color: var(--colors-focus);
+}

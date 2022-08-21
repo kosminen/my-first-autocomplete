@@ -1,0 +1,31 @@
+.github-autocomplete {
+  & label {
+    display: block;
+    width: 100%;
+  }
+
+  & input {
+    display: block;
+    width: 100%;
+  }
+
+  & .autocomplete__datalist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+
+    transition: all 0.2s ease;
+  }
+
+  & .autocomplete__datalist[aria-hidden="true"] {
+    display: block;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, -0.5rem, 0);
+  }
+}

@@ -1,0 +1,12 @@
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.5rem 0.75rem;
+
+  border: 1px solid var(--colors-border);
+  border-radius: 2px;
+}

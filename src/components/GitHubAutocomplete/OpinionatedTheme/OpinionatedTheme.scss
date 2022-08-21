@@ -1,0 +1,87 @@
+// TODO: Make the default radius a variable.
+// TODO: Maybe use typographic scale or something.
+
+.github-autocomplete {
+  max-width: 35rem;
+  margin-inline: auto;
+  padding: 1rem;
+
+  & .autocomplete {
+    position: relative;
+  }
+
+  & .autocomplete__datalist {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: 0;
+    right: 0;
+
+    border: 1px solid var(--colors-border);
+    border-radius: 0 0 2px 2px;
+
+    max-height: 15rem;
+    overflow-y: auto;
+  }
+
+  & .autocomplete__datalist__item:not(:first-child) {
+    border-top: 1px dotted var(--colors-border);
+  }
+
+  & .autocomplete__datalist__item a {
+    padding: 0.5rem 0.75rem;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    background-color: white;
+    color: inherit;
+    text-decoration: none;
+
+    &:focus {
+      outline-offset: -4px;
+    }
+
+    & .label {
+      flex: 1 0 auto;
+    }
+
+    & .additional-info {
+      flex: 0 0 auto;
+
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: hsl(0deg 0% 50%);
+    }
+
+    & .url {
+      flex: 0 0 auto;
+      width: 100%;
+
+      font-size: 0.75rem;
+      color: hsl(0deg 0% 50%);
+    }
+  }
+
+  & .autocomplete__datalist__item a:hover {
+    background-color: hsl(0deg 0% 95%);
+  }
+
+  & .autocomplete__datalist__item a:focus {
+    outline-color: var(--colors-focus);
+  }
+
+  & .autocomplete__message {
+    margin-top: 0.5rem;
+    color: hsl(0deg 0% 50%);
+  }
+
+  // Open state.
+
+  & .autocomplete.is--open {
+    & input {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
