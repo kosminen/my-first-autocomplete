@@ -5,6 +5,8 @@ import { mapQueriedItems } from "./useGitHubQuery.helpers";
 const USER_SEARCH_URL = "https://api.github.com/search/users";
 const REPO_SEARCH_URL = "https://api.github.com/search/repositories";
 
+// TODO: Adjust the retry settings.
+
 interface useGitHubQueryProps {
   query: string;
 }
