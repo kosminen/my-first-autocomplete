@@ -4,15 +4,15 @@
 .github-autocomplete {
   max-width: 35rem;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 2rem;
 
-  & .autocomplete {
+  & .autocomplete__combo-box {
     position: relative;
   }
 
   & .autocomplete__datalist {
     position: absolute;
-    top: calc(100% + 0.25rem);
+    top: calc(100% + 2px);
     left: 0;
     right: 0;
 

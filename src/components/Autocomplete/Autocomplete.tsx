@@ -108,31 +108,34 @@ function Autocomplete({
       {...focusWithinProps}
     >
       <label htmlFor={id}>{label}</label>
-      <input
-        autoComplete="off"
-        autoCapitalize="none"
-        id={id}
-        name={id}
-        type="text"
-        value={value}
-        onChange={onChange}
-        role="combobox"
-        aria-autocomplete="list"
-        aria-expanded={showDataList}
-      />
 
-      <ul
-        ref={list}
-        className="autocomplete__datalist"
-        role="listbox"
-        aria-hidden={!showDataList}
-      >
-        {dataList.map((item) => (
-          <li key={item.id} className="autocomplete__datalist__item">
-            {renderItem(item)}
-          </li>
-        ))}
-      </ul>
+      <div className="autocomplete__combo-box">
+        <input
+          autoComplete="off"
+          autoCapitalize="none"
+          id={id}
+          name={id}
+          type="text"
+          value={value}
+          onChange={onChange}
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded={showDataList}
+        />
+
+        <ul
+          ref={list}
+          className="autocomplete__datalist"
+          role="listbox"
+          aria-hidden={!showDataList}
+        >
+          {dataList.map((item) => (
+            <li key={item.id} className="autocomplete__datalist__item">
+              {renderItem(item)}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div aria-live="polite" role="status" className="autocomplete__message">
         {message}
