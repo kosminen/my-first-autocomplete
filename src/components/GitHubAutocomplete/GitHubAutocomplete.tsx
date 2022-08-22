@@ -3,7 +3,7 @@ import Autocomplete from "../Autocomplete";
 import useDebounce from "../../hooks/useDebounce";
 
 import { sortDataListByString } from "./GitHubAutocomplete.helpers";
-import useGitHubQuery from "./useGithubQuery";
+import useGitHubQuery from "./useGitHubQuery";
 
 import "./GitHubAutocomplete.scss";
 import "./OpinionatedTheme/OpinionatedTheme.scss";
